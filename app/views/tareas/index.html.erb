@@ -1,6 +1,19 @@
 <h1> mis Tareas</h1>
-<ul>
+<table class="table table-hover">
+	<head class="thead-dark">
+		<th>tarea</th>
+		<th>ver</th>
+		<th>editar</th>
+		<th>eliminar</th>	
+	</head>
 	<% @tareas.each do |tarea|%>
-	<li><%=tarea.titulo%></li>
+	<tr>
+		<td><%= tarea.titulo,{controller: "tareas", action: "show", id: tareas.id} %></td>
+		<td><button class="btn btn-warning">Editar</button></td>
+		<td><button class="btn btn-danger">Eliminar</button></td>
+	</tr>			
+	
     <% end %>
-</ul>
+</table>
+
+
