@@ -1,19 +1,9 @@
-<h1> mis Tareas</h1>
-<table class="table table-hover">
-	<head class="thead-dark">
-		<th>tarea</th>
-		<th>ver</th>
-		<th>editar</th>
-		<th>eliminar</th>	
-	</head>
-	<% @tareas.each do |tarea|%>
-	<tr>
-		<td><%= tarea.titulo,{controller: "tareas", action: "show", id: tareas.id} %></td>
-		<td><button class="btn btn-warning">Editar</button></td>
-		<td><button class="btn btn-danger">Eliminar</button></td>
-	</tr>			
-	
-    <% end %>
-</table>
 
+<% if usuario_signed_in? %>
+<h1>bienvenido <%= current_usuario.email %></h1>
+<%else%>
+<h1>bienvenido a mi sitio</h1>
+<!-- comentarios -->
+<%end%>
+<p>mi primer sitio de rails</p>
 
